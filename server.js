@@ -6,6 +6,7 @@ const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 const messagesRoutes = require('./routes/messagesRoutes');
+const likeRoutes = require('./routes/likeRoutes');
 const app = express();
 const port = process.env.PORT || 5001;
 
@@ -16,6 +17,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/messages', messagesRoutes);
+app.use('/api/likes', likeRoutes);
 
 mongoose.connect('mongodb://localhost/playmate', {
   useNewUrlParser: true,
